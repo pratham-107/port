@@ -39,6 +39,7 @@ nav ul a {
     transition: 0.2s ease-in-out;
     font-weight: 800;
     text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 nav ul a:hover {
@@ -51,6 +52,7 @@ nav ul a:hover {
     transition: 0.2s ease-in-out;
     color: #ff4d51;
     text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .logo:hover {
@@ -97,6 +99,49 @@ nav ul a:hover {
     margin-bottom: 1.25em;
 }
 
+/* Typewriter effect for the first line */
+.typewriter.line1 {
+    font-size: 2rem;
+    font-family: 'Courier New', Courier, monospace;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    width: 0;
+    display: inline-block;
+    animation: typingLine1 3s steps(15, end) forwards, blink-caret 2s step-end infinite;
+}
+
+/* Typewriter effect for the second line */
+.typewriter.line2 {
+    font-size: 2rem;
+    font-family: 'Courier New', Courier, monospace;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    width: 0;
+    display: inline-block;
+    animation: typingLine2 4s steps(20, end) forwards 0.99s, blink-caret 0.75s step-end infinite;
+}
+
+/* Keyframes for typing animation for line 1 */
+@keyframes typingLine1 {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+/* Keyframes for typing animation for line 2 */
+@keyframes typingLine2 {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+/* Blinking caret animation */
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: black; }
+}
+
+
 .home p {
     font-size: 1em;
     color: #b0b0b0;
@@ -118,33 +163,19 @@ nav ul a:hover {
     color: #ff4d51;
 }
 
-.about {
-    height: 100vh;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 6.25em 3.125em;
-    position: relative;
+.image-container {
+    max-width: 350px;
+    max-height: 400px;
+    margin-right: 10em;
 }
 
-.content-2 {
-    max-width: 600px;
-    margin-left: 10em;
+.profile-img {
+    width: 350px;
+    height: 360px;
+    aspect-ratio: 1/1; 
+    border-radius: 23%; 
+    object-fit: cover; 
 }
-
-.about h1 {
-    color: aliceblue;
-    font-size: 3em;
-    line-height: 1.2;
-    margin-bottom: 1.25em;
-}
-
-.about p {
-    font-size: 1em;
-    color: #b0b0b0;
-    margin-bottom: 20px;
-}
-
 
 /* ABOUT section */
 
@@ -231,7 +262,7 @@ nav ul a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 115vh;
+    min-height: 100vh;
     background-color: black;
 }
 
